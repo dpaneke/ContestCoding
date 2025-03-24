@@ -1,4 +1,4 @@
-package CSES;
+package CSES.IntroductoryProblems;
 
 import java.io.PrintWriter;
 import java.util.Scanner;

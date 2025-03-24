@@ -1,23 +1,22 @@
-package CSES;
+package CSES.IntroductoryProblems;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.StreamTokenizer;
 
-public class IncreasingArrayJava {
+public class MissingNumberJava {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StreamTokenizer st = new StreamTokenizer(br);
         st.nextToken();
-        st.nextToken();
-        int curMax = (int) st.nval;
-        long nMoves = 0;
+        long n = (long) st.nval;
+
+        long sumToN = n * (n + 1) / 2;
+        long curSum = 0;
         while (st.nextToken() != StreamTokenizer.TT_EOF) {
-            int val = (int) st.nval;
-            if (val > curMax) curMax = val;
-            else nMoves += (curMax - val);
+            curSum += (int) st.nval;
         }
-        System.out.println(nMoves);
+        System.out.println(sumToN - curSum);
     }
 }
