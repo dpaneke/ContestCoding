@@ -85,16 +85,6 @@ public class GridPaths {
             }
         }
     }
-    public static HashMap<Integer, Character> getMapPattern(String pattern) {
-        HashMap<Integer, Character> mapPattern = new HashMap<>();
-        for (int i = 0; i < pattern.length(); i++) {
-            char ch = pattern.charAt(i);
-            if (ch != '?') {
-                mapPattern.put(i, ch);
-            }
-        }
-        return mapPattern;
-    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
